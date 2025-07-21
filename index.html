@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SV-E Connect - Digital E-Service Center</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .custom-nav {
+      background: linear-gradient(to right, #00c6ff,#8ed8d8, #69076d);
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      flex-wrap: wrap;
+    }
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #f8f5f7;
+      text-shadow:0 0 50px rgb(114, 14, 36);
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .nav-links a {
+      background: #111;
+      color: #00ffff;
+      padding: 8px 16px;
+      border-radius: 5px 15px 5px 15px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .nav-links a:hover {
+      background: #00ffff;
+      color: #111;
+      transform: scale(1.1);
+    }
+    .hero {
+     
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      text-shadow: 0 0 20px #00f7ff;
+    }
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .custom-nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 10px;
+      }
+    }
+    .glow-btn {
+      background: #00ffff;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 30px;
+      box-shadow: 0 0 10px #00ffff;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .glow-btn:hover {
+      background: #00c0ff;
+      box-shadow: 0 0 20px #00ffff;
+    }
+   .service-card {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+      transition: all 0.4s;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      min-height: 250px;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
+    }
+    .service-card h4 {
+      background: rgba(0, 0, 0, 0.7);
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+    .service-card p {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    #contact {
+      background: linear-gradient(135deg, #0f0f0f, #001f2f);
+      color: #00ffff;
+    }
+    #contact input, #contact textarea {
+      background-color: #222;
+      color: #00ffff;
+      border: 1px solid #00ffff;
+    }
+    #contact input::placeholder,
+    #contact textarea::placeholder {
+      color: #00ffff;
+      opacity: 0.7;
+    }
+    #contact button {
+      background: #00ffff;
+      color: #000;
+      font-weight: bold;
+      box-shadow: 0 0 15px #00ffff;
+    }
+    #contact button:hover {
+      background: #00c0ff;
+      box-shadow: 0 0 25px #00ffff;
+    }
+    footer {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="custom-nav">
+    <div class="nav-logo">SV-E Connect</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#services">Service</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <section class="hero-section text-center p-5" style="background: linear-gradient(45deg, #00c6ff, #69076d); color: white;">
+    <div class="container">
+      <img src="data/logo.png" alt="SV-E Connect Logo" class="img-fluid mb-4" style="max-width: 150px; animation: bounceIn 1.5s; border-radius: 50px;">
+      <h1 class="display-4 fw-bold">Welcome to SV-E Connect</h1>
+      <p class="lead">Your trusted E-Service Center for all digital needs</p>
+      <a href="#services" class="btn btn-warning btn-lg mt-3">Explore Services</a>
+    </div>
+  </section>
+
+  <section id="services" class="py-5 text-center">
+    <div class="container">
+      <h2 class="mb-4">Our Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="zoom-in">
+          <div class="service-card" style="background-image: url('data/pan.jpg');">
+            <h4>PAN Card Services</h4>
+            <p>Apply, Update, and Track your PAN card easily.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="service-card" style="background-image: url('data/aadhar.png');">
+            <h4>Aadhar Updates</h4>
+            <p>Biometric and demographic changes with eKYC.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="service-card" style="background-image: url('data/bill.webp');">
+            <h4>Bill Payments</h4>
+            <p>Electricity, Gas, Water, DTH & Postpaid bills.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="service-card" style="background-image: url('data/money.jpg');">
+            <h4>Money Transfer</h4>
+            <p>Instant bank transfers with secure gateways.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+          <div class="service-card" style="background-image: url('data/moblie.jpg');">
+            <h4>Mobile Services</h4>
+            <p>New/Used Mobiles, Repairs, Recharge & Accessories.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="500">
+          <div class="service-card" style="background-image: url('data/loan.jpg');">
+            <h4>Insurance & Loan Help</h4>
+            <p>All types of insurance and loan assessment support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <div class="row">
+        <div class="col-md-6" data-aos="fade-right">
+          <form action="https://formsubmit.co/gunalakshmanangk@gmail.com" method="POST">
+            <input type="text" name="name" class="form-control mb-3" placeholder="Your Name" required>
+            <input type="email" name="email" class="form-control mb-3" placeholder="Your Email" required>
+            <textarea name="message" class="form-control mb-3" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit" class="glow-btn w-100">Send Message</button>
+          </form>
+          <div class="mt-4 text-light">
+            <h5>Contact Info</h5>
+             <p><strong>Name:</strong> <a href="" class="text-info">Viliyangray</a></p>
+            <p><strong>Mobile:</strong> <a href="tel:8056734287" class="text-info">9543353306 , 9865865679</a></p>
+            <p><strong>Email:</strong> <a href="mailto:gunalakshmanangk@gmail.com" class="text-info">svtech0609@gmail.com</a></p>
+            <p><strong>Location:</strong> 7/63-5B,NR Complex, Keeranatham Rd, Keeranatham, Tamil Nadu 641035</p>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7830.2638012676925!2d77.0085787!3d11.1035461!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8f9c61cdf7a47%3A0x728a406dab49fef!2sDiksha%20Mobiles!5e0!3m2!1sen!2sin!4v1753039832747!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 SV-E Connect. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
