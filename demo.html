@@ -99,7 +99,6 @@
       border-radius: 10px;
     }
 
-    /* Updated Contact Section */
     #contact {
       background: linear-gradient(135deg, #0f0f0f, #001f2f);
       color: #00ffff;
@@ -148,20 +147,22 @@
   </div>
 
   <!-- Hero -->
-  <section class="hero text-white">
-    <div>
-      <h1 class="animate__animated animate__fadeInDown">Your One-Stop Digital Service Center</h1>
-      <p class="lead animate__animated animate__fadeInUp">PAN, Aadhar, Mobile, Recharge, Bill Payments & More</p>
-      <a href="#services" class="glow-btn mt-4 d-inline-block animate__animated animate__fadeInUp">Explore Services</a>
-    </div>
-  </section>
+  <!-- Hero Section (Add this inside <body>) -->
+<section class="hero-section text-center p-5" style="background: linear-gradient(145deg, #0ff, #00f); color: white;">
+  <div class="container">
+    <img src="data/logo.png" alt="SV-E Connect Logo" class="img-fluid mb-4" style="max-width: 150px; animation: bounceIn 1.5s;">
+    <h1 class="display-4 fw-bold">Welcome to SV-E Connect</h1>
+    <p class="lead">Your trusted E-Service Center for all digital needs</p>
+    <a href="#services" class="btn btn-warning btn-lg mt-3">Explore Services</a>
+  </div>
+</section>
+
 
   <!-- Services -->
   <section id="services" class="py-5 text-center">
     <div class="container">
       <h2 class="mb-4">Our Services</h2>
       <div class="row g-4">
-        <!-- Services (unchanged) -->
         <div class="col-md-4" data-aos="zoom-in">
           <div class="service-card" style="background-image: url('data/pan.jpg');">
             <h4>PAN Card Services</h4>
@@ -202,27 +203,36 @@
     </div>
   </section>
 
-  <!-- Contact Section with Neon and Animation -->
-  <section id="contact" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Contact Us</h2>
-      <div class="row">
-        <div class="col-md-6" data-aos="fade-right">
-          <form>
-            <input type="text" class="form-control mb-3" placeholder="Name">
-            <input type="email" class="form-control mb-3" placeholder="Email">
-            <textarea class="form-control mb-3" placeholder="Message" rows="4"></textarea>
-            <button type="submit" class="glow-btn w-100">Send Message</button>
-          </form>
-        </div>
-        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7830.2638012676925!2d77.0085787!3d11.1035461!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8f9c61cdf7a47%3A0x728a406dab49fef!2sDiksha%20Mobiles!5e0!3m2!1sen!2sin!4v1753039832747!5m2!1sen!2sin"
-            width="100%" height="450" style="border:0;" allowfullscreen loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <!-- Contact Section -->
+ <!-- Contact Section -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <div class="row">
+      <div class="col-md-6" data-aos="fade-right">
+        <form action="https://formsubmit.co/gunalakshmanangk@gmail.com" method="POST">
+          <input type="text" name="name" class="form-control mb-3" placeholder="Name" required>
+          <input type="email" name="email" class="form-control mb-3" placeholder="Email" required>
+          <textarea name="message" class="form-control mb-3" placeholder="Message" rows="4" required></textarea>
+          <button type="submit" class="glow-btn w-100">Send Message</button>
+        </form>
+        <div class="mt-4 text-light">
+          <h5>Contact Info</h5>
+           <p><strong>Name:</strong> <h5 class="text-info">Viliyangray</h5></p>
+          <p><strong>Mobile:</strong> <a href="tel:8056734287" class="text-info"> 9543353306 , 9865865679</a></p>
+          <p><strong>Email:</strong> <a href="mailto:gunalakshmanangk@gmail.com" class="text-info">svtech0609@gmail.com</a></p>
+          <p><strong>Location:</strong> 7/63-5B,NR Complex, Keeranatham Rd, Keeranatham, Tamil Nadu 641035</p>
         </div>
       </div>
+      <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7830.2638012676925!2d77.0085787!3d11.1035461!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8f9c61cdf7a47%3A0x728a406dab49fef!2sDiksha%20Mobiles!5e0!3m2!1sen!2sin!4v1753039832747!5m2!1sen!2sin"
+          width="100%" height="450" style="border:0;" allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <footer>
     &copy; 2025 SV-E Connect. All rights reserved.
